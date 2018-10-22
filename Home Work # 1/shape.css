@@ -1,0 +1,30 @@
+.entire{
+    
+   height: 600px;
+   width: 1000px;
+   display: flex;
+   flex-direction: column;
+   border: 1px solid black;
+   background: rgba(228, 149, 2, 0.397);
+}
+
+.up{
+  flex:1;
+  display: flex;
+  justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.down{
+    flex:5;
+   border: 1px solid rgb(226, 43, 43); 
+    
+}
+
+.interface{
+    height:25px;
+    width:300px;
+   
+   /* border:  1px  dotted red; */
+}
