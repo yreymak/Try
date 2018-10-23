@@ -1,4 +1,4 @@
-.entire{
+#entire{
     
    height: 600px;
    width: 1000px;
@@ -16,7 +16,7 @@
     border: 1px solid black;
 }
 
-.down{
+#down{
     flex:5;
    border: 1px solid rgb(226, 43, 43); 
     
@@ -25,12 +25,7 @@
 .interface{
     height:25px;
     width:300px;
-   
+  
    /* border:  1px  dotted red; */
 }
 
-#cðî{
-    height: 40px;
-    width: 70px;
-    border: 3px solid black;
-}
