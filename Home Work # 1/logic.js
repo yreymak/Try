@@ -15,7 +15,7 @@ function createButton(color) {
 }
 
 function addButton() {
-  var color = document.getElementById('input').value;
+  var color = "#" + document.getElementById('input').value;
 
   var button = createButton(color);
   
