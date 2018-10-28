@@ -1,4 +1,6 @@
-//////changeBackground
+//color=document.getElementById('input').value;;
+
+//changeBackground
 function changeBackground(color) {
   
   var mainContainer = document.getElementById('main-container');
@@ -13,25 +15,54 @@ function createButton(color) {
   button.className = 'button';
   button.innerHTML = color;
   button.style.background = color;
-
   return button;
 }else{
   alert("Invalid color\nChange your choise");
 }
 }
 
+function create_helpful_Button(text){ 
+   let button = document.createElement("button");
+   button.style.height=14;
+   button.textContent=text;
+   let place = document.getElementById("input");
+   place.insertAdjacentElement("afterend",button);
+   return button;
+}
+
+function add_delete_button(obj,main_button,buttonCon){
+  obj.addEventListener("click",function(){
+    buttonCon.removeChild(main_button);
+    obj.parentNode.removeChild(this);
+  });
+}
+
+
+function add_change_Background_button(obj,color){
+  obj.addEventListener("click",function(){
+  changeBackground(color) ;
+   
+  obj.parentNode.removeChild(this);
+  });
+}
+
+
+
 function addButton() {
   var color =  document.getElementById('input').value;
 
-  var button = createButton(color);
+  var button_main = createButton(color);
   
-  button.addEventListener('click', function() {
-    changeBackground(color);
+  
+  button_main.addEventListener('click',function(){
+    add_change_Background_button(create_helpful_Button("select"),color)
+    add_delete_button(create_helpful_Button("delete"),button_main,buttonContainer);
   });
 
   
   var buttonContainer = document.getElementById('button-container');
-  buttonContainer.appendChild(button);
+  buttonContainer.appendChild(button_main);
+  //buttonContainer.insertAdjacentElement("beforeend",button_main);
 }
 
 //////////////////////////////////////////////////////
