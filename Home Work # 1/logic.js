@@ -1,3 +1,4 @@
+//////changeBackground
 function changeBackground(color) {
   
   var mainContainer = document.getElementById('main-container');
@@ -8,7 +9,7 @@ function changeBackground(color) {
 function createButton(color) {
   if(ValidImage(color)){
   var button = document.createElement('button');
-
+  
   button.className = 'button';
   button.innerHTML = color;
   button.style.background = color;
@@ -27,11 +28,23 @@ function addButton() {
   button.addEventListener('click', function() {
     changeBackground(color);
   });
+
   
   var buttonContainer = document.getElementById('button-container');
   buttonContainer.appendChild(button);
 }
 
+/////////////////////////////////////////////////////
+//////__delete__////////////////////////////////////
+function obj_delete(obj){
+   delete obj;
+}
+
+
+
+//////////////////////////////////////////////////////
+//Checks color valid
+/////////////////////////////////////////////////////
 function WhiteCheck(value,obj){
   obj.style.color="rgb(255,255,255)";
   obj.style.color=value;
@@ -39,6 +52,7 @@ function WhiteCheck(value,obj){
 }
 
 function BlackCheck(value,obj){
+  obj.style.color="rgb(0,0,0)";
   obj.style.color=value;
   return obj.style.color;
 }
