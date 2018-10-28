@@ -1,10 +1,12 @@
 function changeBackground(color) {
+  
   var mainContainer = document.getElementById('main-container');
 
   mainContainer.style.background = color;
 }
 
 function createButton(color) {
+  if(ValidImage(color)){
   var button = document.createElement('button');
 
   button.className = 'button';
@@ -12,10 +14,13 @@ function createButton(color) {
   button.style.background = color;
 
   return button;
+}else{
+  alert("Invalid color\nChange your choise");
+}
 }
 
 function addButton() {
-  var color = "#" + document.getElementById('input').value;
+  var color =  document.getElementById('input').value;
 
   var button = createButton(color);
   
@@ -25,4 +30,24 @@ function addButton() {
   
   var buttonContainer = document.getElementById('button-container');
   buttonContainer.appendChild(button);
+}
+
+function WhiteCheck(value,obj){
+  obj.style.color="rgb(255,255,255)";
+  obj.style.color=value;
+  return obj.style.color;
+}
+
+function BlackCheck(value,obj){
+  obj.style.color=value;
+  return obj.style.color;
+}
+
+function ValidImage(color){
+
+  if(color===""){return false;}
+    
+  var image=document.createElement("img");
+  
+  return (BlackCheck(color,image)===WhiteCheck(color,image));
 }

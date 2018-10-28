@@ -9,6 +9,10 @@
   background: rgba(228, 149, 2, 0.397);
 }
 
+/* #selectColor{
+  height: 12;
+} */
+
 #menu{
   flex:1;
   display: flex;
@@ -20,7 +24,7 @@
 
 #button-container{
   flex:5;
-
+  height : 33px;
   border: 1px solid rgb(226, 43, 43);
 }
 
