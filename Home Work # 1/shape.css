@@ -1,6 +1,6 @@
 #main-container {
   height: 600px;
-  width: 1000px;
+  /* width: 1000px; */ 
 
   display: flex;
   flex-direction: column;
@@ -8,6 +8,8 @@
   border: 1px solid black;
   background: rgba(228, 149, 2, 0.397);
 }
+
+
 
 #menu{
   flex:1;
@@ -20,7 +22,7 @@
 
 #button-container{
   flex:5;
-
+  height : 33px;
   border: 1px solid rgb(226, 43, 43);
 }
 
